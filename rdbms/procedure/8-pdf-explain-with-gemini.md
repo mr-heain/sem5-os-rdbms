@@ -155,3 +155,111 @@ End Sub
 ```
 
 That’s it! No messy connection strings, no VisData add-in, and it fulfills all the exact logic your examiner is looking for. When is your practical exam scheduled?
+
+To run these directly inside MS Access, the external VB6 ADODB connection strings are removed, and the logic is updated to use native Access VBA (CurrentDb.Execute and DoCmd) based on the structures in "sql.pdf".
+9) STUDENT MARKSHEET PROCESSING
+Private Sub calcmd_Click()
+    ' Calculate Total
+    Text7.Value = Val(Nz(Text3.Value, 0)) + Val(Nz(Text4.Value, 0)) + Val(Nz(Text5.Value, 0)) + Val(Nz(Text6.Value, 0))
+    
+    ' Check Pass/Fail logic (if any mark is <= 30)
+    If Val(Nz(Text3.Value, 0)) <= 30 Or Val(Nz(Text4.Value, 0)) <= 30 Or Val(Nz(Text5.Value, 0)) <= 30 Or Val(Nz(Text6.Value, 0)) <= 30 Then
+        Text8.Value = "FAIL"
+    Else
+        Text8.Value = "PASS"
+    End If
+    
+    ' Calculate Percentage
+    Text9.Value = Val(Text7.Value) / 4
+End Sub
+
+Private Sub insertcmd_Click()
+    Dim sql As String
+    ' Insert directly into the "st" table
+    sql = "INSERT INTO st (stid, stname, os, rdbms, cn, se, total, result, percentage) " & _
+          "VALUES (" & Text1.Value & ", '" & Text2.Value & "', " & Text3.Value & ", " & Text4.Value & ", " & _
+          Text5.Value & ", " & Text6.Value & ", " & Text7.Value & ", '" & Text8.Value & "', " & Text9.Value & ")"
+    
+    CurrentDb.Execute sql
+    MsgBox "Successfully Inserted"
+    
+    ' Clear fields
+    Text1.Value = ""
+    Text2.Value = ""
+    Text3.Value = ""
+    Text4.Value = ""
+    Text5.Value = ""
+    Text6.Value = ""
+    Text7.Value = ""
+    Text8.Value = ""
+    Text9.Value = ""
+End Sub
+
+Private Sub delcmd_Click()
+    Dim studentID As String
+    studentID = InputBox("Enter the Student ID to delete:")
+    
+    If Trim(studentID) = "" Then
+        MsgBox "No ID entered. Operation cancelled."
+        Exit Sub
+    End If
+    
+    CurrentDb.Execute "DELETE FROM st WHERE stid = " & studentID
+    MsgBox "Record with ID " & studentID & " deleted successfully!"
+End Sub
+
+Private Sub reportcmd_Click()
+    ' Replaces DataReport1.Show
+    DoCmd.OpenReport "YourReportName", acViewPreview
+End Sub
+
+10) PAYROLL PROCESSING
+Private Sub calcmd_Click()
+    Text4.Value = Val(Nz(Text3.Value, 0)) * 0.25
+    Text5.Value = Val(Nz(Text3.Value, 0)) * 0.12
+    Text6.Value = Val(Nz(Text3.Value, 0)) + Val(Nz(Text4.Value, 0))
+    Text7.Value = Val(Nz(Text6.Value, 0)) - Val(Nz(Text5.Value, 0))
+End Sub
+
+Private Sub insertcmd_Click()
+    Dim sql As String
+    ' Insert directly into the "emp" table
+    sql = "INSERT INTO emp (empid, empname, salary, gross, net) " & _
+          "VALUES (" & Text1.Value & ", '" & Text2.Value & "', " & Text3.Value & ", " & Text6.Value & ", " & Text7.Value & ")"
+    
+    CurrentDb.Execute sql
+    MsgBox "Successfully Inserted"
+    
+    ' Clear fields
+    Text1.Value = ""
+    Text2.Value = ""
+    Text3.Value = ""
+    Text4.Value = ""
+    Text5.Value = ""
+    Text6.Value = ""
+    Text7.Value = ""
+End Sub
+
+Private Sub delcmd_Click()
+    Dim eid As String
+    eid = InputBox("Enter the EMPLOYEE ID to delete:")
+    
+    If Trim(eid) = "" Then
+        MsgBox "No ID entered. Operation cancelled."
+        Exit Sub
+    End If
+    
+    CurrentDb.Execute "DELETE FROM emp WHERE empid = " & eid
+    MsgBox "Record with ID " & eid & " deleted successfully!"
+End Sub
+
+Private Sub reportcmd_Click()
+    ' Replaces DataReport1.Show
+    DoCmd.OpenReport "YourReportName", acViewPreview
+End Sub
+
+Private Sub exitcmd_Click()
+    ' Replaces VB6 End command
+    DoCmd.Quit
+End Sub
+
