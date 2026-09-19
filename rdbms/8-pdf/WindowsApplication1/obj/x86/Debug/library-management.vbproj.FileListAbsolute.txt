@@ -1,0 +1,13 @@
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form2.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form3.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form4.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form5.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\library-management.vbproj.GenerateResource.Cache
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\library_management.exe
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\library_management.pdb
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\library_management.xml
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\library_management.exe
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\library_management.xml
+c:\users\heain\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\library_management.pdb
