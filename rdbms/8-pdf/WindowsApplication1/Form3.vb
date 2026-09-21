@@ -2,7 +2,8 @@
 
 Public Class Form3
 
-    Dim cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=lib.mdb")
+    'Dim cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=lib.mdb")
+    Dim cn As New OleDbConnection("Provider=MSDAORA; Data Source=XE;User Id=system;Password=system;")
 
     Private Sub Form3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Disables editing of these fields just like the manual
