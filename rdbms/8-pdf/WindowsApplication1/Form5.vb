@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Form5
-    Dim cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=lib.MDB")
+    'Dim cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=lib.MDB")
+    Dim cn As New OleDbConnection("Provider=MSDAORA; Data Source=XE;User Id=system;Password=system;")
 
     Private Sub Form5_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
