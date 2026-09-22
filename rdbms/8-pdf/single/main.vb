@@ -7,21 +7,21 @@ Public Class main
     ' --- 1. ADD BOOK ---
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
         ' 1. Check if any of your textboxes are empty first
-        If TextBox5.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Then
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Then
             MsgBox("Please fill in all fields before adding a book.")
             Exit Sub ' Stops the code here so Oracle doesn't crash
         End If
 
         Try
             cn.Open()
-            Dim sql As String = "INSERT INTO book VALUES (" & TextBox5.Text & ", '" & TextBox2.Text & "', '" & TextBox3.Text & "', " & TextBox4.Text & ")"
+            Dim sql As String = "INSERT INTO book VALUES (" & TextBox1.Text & ", '" & TextBox2.Text & "', '" & TextBox3.Text & "', " & TextBox4.Text & ")"
             Dim cmd As New OleDbCommand(sql, cn)
             cmd.ExecuteNonQuery()
 
             MsgBox("Book Added Successfully!")
 
             ' Clear textboxes after adding
-            TextBox5.Clear()
+            TextBox1.Clear()
             TextBox2.Clear()
             TextBox3.Clear()
             TextBox4.Clear()
