@@ -26,7 +26,7 @@ void main()
     }
     for(i=1; i<=nf; i++)
     {
-        highest = 0;
+        highest = -1;
         for(j=1; j<=nb; j++)
         {
             if(bf[j] != 1)
