@@ -1,9 +1,0 @@
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\bin\Debug\p9-vb2010.exe
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\bin\Debug\p9-vb2010.pdb
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\bin\Debug\p9-vb2010.xml
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9_vb2010.Form1.resources
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9_vb2010.Resources.resources
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9-vb2010.vbproj.GenerateResource.Cache
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9-vb2010.exe
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9-vb2010.xml
-C:\Users\Heain\Documents\Visual Studio 2010\Projects\p9-vb2010\p9-vb2010\obj\x86\Debug\p9-vb2010.pdb
